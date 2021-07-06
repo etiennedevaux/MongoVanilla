@@ -78,3 +78,10 @@ documents = coll.find()
 
 for doc in documents:
     print(doc)
+
+    """ Find documents with 'first' name set to 'douglas' """
+documents = coll.find({"first": "douglas"})
+
+""" Delete documents with 'first' name set to 'douglas' """
+coll.remove({"first": "douglas"})
+documents = coll.find()
